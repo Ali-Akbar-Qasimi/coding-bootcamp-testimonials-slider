@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+
+$DarkBlue: hsl(240, 38%, 20%);
+$GrayishBlue: hsl(240, 18%, 77%);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/pattern-curve.svg);
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .image-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50%;
+        .image{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(./images/pattern-bg.svg);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            padding-block: 50px;
+            background-position: center;
+            .img{
+                width: 60%;
+                height: 100%;
+                border-radius: 5px;
+                box-shadow: 0 4px 15px 0 $DarkBlue;
+                object-fit: cover;
+            }
+        }
+        .buttons{
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            width: 70px;
+            padding: 5px 10px 3px 10px;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 20px;
+            margin-top: -65px;
+            div{
+                cursor: pointer;
+                img{
+                    width: 10px;
+                }
+            }
+        }
+    }
+    .content{
+        background-image: url(./images/pattern-quotes.svg);
+        background-repeat: no-repeat;
+        background-size: 50px;
+        background-position: center top;
+        padding-top: 30px;
+        margin-top: -30px;
+        text-align: center;
+        padding-inline: 50px;
+        .body{
+            font-size: 22px;
+            font-weight: 300;
+            color: $DarkBlue;
+        }
+        .name{
+            margin-top: 50px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .career{
+            font-size: 16px;
+            font-weight: 500;
+            color: $GrayishBlue;
+        }
+    }
+}
+
+@media screen and (min-width:800px){
+    .container{
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        background-size: 50%;
+        background-position: left bottom;
+        padding-inline: 100px;
+        .image-container{
+            width: 100%;
+            flex-grow: 1;
+            height: 100%;
+            .image{
+                height: 100%;
+                justify-content: center;
+                .img{
+                    margin-right: 200px;
+                    height: 80%;
+                    width: 100%;
+                }
+            }
+            .buttons{
+                margin-top: -130px;
+                margin-left: -250px;
+            }
+        }
+        .content{
+            margin-top: 0;
+            width: 100%;
+            flex-grow: 1;
+            text-align: start;
+            background-position: 20% top;
+            .body{
+                margin-bottom: 50px;
+                font-size: 24px;
+            }
+            .name{
+                display: inline;
+            }
+            .career{
+                display: inline;
+            }
+        }
+    }
+}
